@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GRSync</string>
+    <string name="app_name_debug">D:GRSync</string>
+</resources>

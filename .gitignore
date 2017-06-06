@@ -1,0 +1,4 @@
+# Credential files
+*.aes
+*.env
+release.keystore

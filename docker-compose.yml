@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  app:
+    build: app
+    privileged: true
+    network_mode: host
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ./app/.cache/.android:/root/.android
+      - ./app/.cache/.gradle:/root/.gradle
+      - ./app/src:/src
+    env_file: secret.env
+    ports:
+      - 8081:8081
+
+  mock:
+    build: mock
+    volumes:
+      - ./mock:/mock
+    ports:
+      - 80:80
